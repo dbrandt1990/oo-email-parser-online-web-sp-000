@@ -10,7 +10,7 @@ class EmailAddressParser
   
   def parse
     if @emails_to_parse.include?(",")
-    emails =  @emails_to_parse.split(',')
+    emails =  @emails_to_parse.split(','&&" ")
     emails.map{|item| item.split(' ')}
     emails.map{|item| item.strip}
   else
