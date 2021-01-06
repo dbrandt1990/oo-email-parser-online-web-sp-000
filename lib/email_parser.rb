@@ -13,7 +13,8 @@ class EmailAddressParser
     emails =  @emails_to_parse.split(',')
     emails.map{|item| item.strip}
   else
-    
+    emails =  @emails_to_parse.split(' ')
+    emails.map{|item| item.strip}
   end
   end
 end
