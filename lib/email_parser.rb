@@ -9,6 +9,7 @@ class EmailAddressParser
   end
   
   def parse
-    @emails_to_parse.split(',')
+    emails =  @emails_to_parse.split(',')
+    emails.map{&:strip}
   end
 end
