@@ -9,7 +9,11 @@ class EmailAddressParser
   end
   
   def parse
+    if @emails_to_parse.include?(",")
     emails =  @emails_to_parse.split(',')
     emails.map{|item| item.strip}
+  else
+    
+  end
   end
 end
