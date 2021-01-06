@@ -9,13 +9,6 @@ class EmailAddressParser
   end
   
   def parse
-    if @emails_to_parse.include?(",")
-    emails =  @emails_to_parse.split(\[\\s]+\)
-    emails.map{|item| item.split(' ')}
-    emails.map{|item| item.strip}
-  else
-    emails =  @emails_to_parse.split(' ')
-    emails.map{|item| item.strip}
-  end
+  @emails_to_parse.split(\\)
   end
 end
